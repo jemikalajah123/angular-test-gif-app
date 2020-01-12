@@ -1,4 +1,16 @@
 <div>
     <!-- Implement result list here -->
-    Results List
+    <!-- <p>{{global?.result}}</p> -->
+    <ul *ngFor="let item of global.result">
+        <li>
+            <div (click)="imageDetails(item)">
+                {{item.title}}<br>
+                <img [src]="item.images.original.url" id="thumbs" />
+                <br>
+                <br>
+            </div>
+
+        </li>
+
+    </ul>
 </div>
